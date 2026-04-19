@@ -14,8 +14,8 @@ var deviceId string
 var dbPath string
 
 var rootCmd = &cobra.Command{
-	Use:   "daikin-one",
-	Short: "daikin-one is a cli to interact with Daikin One devices",
+	Use:   "daikin-cli",
+	Short: "daikin-cli is a CLI for Daikin One+ thermostats",
 }
 
 func Execute() {

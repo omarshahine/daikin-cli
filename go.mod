@@ -1,4 +1,4 @@
-module github.com/redgoose/daikin-one
+module github.com/omarshahine/daikin-cli
 
 go 1.20
 

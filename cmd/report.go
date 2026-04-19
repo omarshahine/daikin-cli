@@ -6,8 +6,8 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/redgoose/daikin-one/internal/charts"
-	"github.com/redgoose/daikin-one/templates"
+	"github.com/omarshahine/daikin-cli/internal/charts"
+	"github.com/omarshahine/daikin-cli/templates"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )

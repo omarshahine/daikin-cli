@@ -1,0 +1,33 @@
+{
+  "id": "daikin-cli",
+  "name": "Daikin",
+  "description": "Read state and control Daikin One+ thermostats (mode, setpoints, Home/Away)",
+  "version": "1.0.0",
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "cliPath": {
+        "type": "string",
+        "description": "Path to daikin-cli binary",
+        "default": "daikin-cli"
+      },
+      "deviceId": {
+        "type": "string",
+        "description": "Default Daikin device ID. Leave blank to auto-discover the first device."
+      }
+    },
+    "additionalProperties": false
+  },
+  "uiHints": {
+    "cliPath": {
+      "label": "CLI Path",
+      "help": "Path or command name for the daikin-cli binary. Defaults to finding it on PATH.",
+      "placeholder": "daikin-cli"
+    },
+    "deviceId": {
+      "label": "Device ID",
+      "help": "UUID of the thermostat to control. Run daikin_list_devices to find it. Leave blank to auto-select the first device.",
+      "placeholder": "00000000-0000-0000-0000-000000000000"
+    }
+  }
+}

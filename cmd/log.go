@@ -9,7 +9,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/redgoose/daikin-one/internal/db"
+	"github.com/omarshahine/daikin-cli/internal/db"
 	"github.com/redgoose/daikin-skyport"
 )
 

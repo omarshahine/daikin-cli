@@ -5,8 +5,8 @@ import (
 	"html/template"
 	"time"
 
-	"github.com/redgoose/daikin-one/internal/db"
-	"github.com/redgoose/daikin-one/templates"
+	"github.com/omarshahine/daikin-cli/internal/db"
+	"github.com/omarshahine/daikin-cli/templates"
 )
 
 type Chart struct {

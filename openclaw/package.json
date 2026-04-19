@@ -1,0 +1,55 @@
+{
+  "name": "daikin-cli",
+  "version": "1.0.0",
+  "description": "OpenClaw plugin for Daikin One+ thermostats",
+  "type": "module",
+  "openclaw": {
+    "extensions": [
+      "./src/index.ts"
+    ],
+    "compat": {
+      "pluginApi": ">=2026.3.23"
+    },
+    "build": {
+      "openclawVersion": "2026.4.15"
+    }
+  },
+  "files": [
+    "src/",
+    "skills/",
+    "openclaw.plugin.json"
+  ],
+  "keywords": [
+    "openclaw",
+    "openclaw-plugin",
+    "daikin",
+    "thermostat",
+    "hvac",
+    "home-automation"
+  ],
+  "author": {
+    "name": "Omar Shahine",
+    "email": "omar@shahine.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/omarshahine/daikin-cli.git",
+    "directory": "openclaw"
+  },
+  "homepage": "https://github.com/omarshahine/daikin-cli#readme",
+  "bugs": {
+    "url": "https://github.com/omarshahine/daikin-cli/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.34.49",
+    "openclaw": "^2026.3.23"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "typescript": "^5.9.3"
+  }
+}

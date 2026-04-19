@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/redgoose/daikin-one/cmd"
+	"github.com/omarshahine/daikin-cli/cmd"
 )
 
 func main() {

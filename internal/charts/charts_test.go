@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	_ "github.com/mattn/go-sqlite3"
-	"github.com/redgoose/daikin-one/internal/db"
+	"github.com/omarshahine/daikin-cli/internal/db"
 )
 
 func TestConvertTempsCtoF(t *testing.T) {
