@@ -1,0 +1,10 @@
+{
+  "name": "daikin-cli",
+  "version": "1.0.0",
+  "description": "Read state and control Daikin One+ thermostats via the Skyport API. Wraps the daikin-cli Go binary; teaches Claude to handle Home/Away, holds, schedule, setpoints, mode, and humidity.",
+  "author": {
+    "name": "Omar Shahine"
+  },
+  "license": "MIT",
+  "keywords": ["daikin", "thermostat", "hvac", "home-automation", "one-plus", "skyport", "iot", "climate"]
+}

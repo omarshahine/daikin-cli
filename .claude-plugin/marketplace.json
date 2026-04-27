@@ -1,0 +1,29 @@
+{
+  "name": "daikin-cli",
+  "owner": {
+    "name": "Omar Shahine"
+  },
+  "metadata": {
+    "description": "Daikin One+ thermostat plugin for Claude Code",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "daikin-cli",
+      "source": ".",
+      "description": "Read state and control Daikin One+ thermostats via the Skyport API: Home/Away, temp + permanent holds, weekly schedule, setpoints, mode, and humidity. Backed by the daikin-cli Go binary.",
+      "version": "1.0.0",
+      "keywords": [
+        "daikin",
+        "thermostat",
+        "hvac",
+        "home-automation",
+        "one-plus",
+        "skyport",
+        "iot",
+        "climate"
+      ],
+      "category": "iot"
+    }
+  ]
+}
