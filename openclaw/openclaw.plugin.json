@@ -2,7 +2,7 @@
   "id": "daikin-cli",
   "name": "Daikin",
   "description": "Read state and control Daikin One+ thermostats (mode, setpoints, Home/Away)",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "configSchema": {
     "type": "object",
     "properties": {
