@@ -5,7 +5,7 @@
  * and control Daikin One+ thermostats (mode, setpoints, Home/Away).
  */
 
-import { definePluginEntry } from 'openclaw/plugin-sdk/plugin-entry';
+import { definePluginEntry, type OpenClawPluginDefinition } from 'openclaw/plugin-sdk/plugin-entry';
 import { Type } from '@sinclair/typebox';
 import { execFileSync, execFile } from 'child_process';
 import { promisify } from 'util';
@@ -354,7 +354,7 @@ async function resolveDeviceId(
 	return cache.value;
 }
 
-export default definePluginEntry({
+const pluginEntry: OpenClawPluginDefinition = definePluginEntry({
 	id: 'daikin-cli',
 	name: 'Daikin',
 	description: 'Read state and control Daikin One+ thermostats',
@@ -449,3 +449,5 @@ export default definePluginEntry({
 		}
 	},
 });
+
+export default pluginEntry;

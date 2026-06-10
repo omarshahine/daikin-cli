@@ -39,6 +39,10 @@ jobs:
           fi
         working-directory: openclaw
 
+      - name: Install dependencies
+        run: npm install
+        working-directory: openclaw
+
       - name: Publish to NPM (OIDC trusted publishing)
         run: npm publish --provenance --access public
         working-directory: openclaw
