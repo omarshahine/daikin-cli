@@ -17,11 +17,21 @@ var awayOff bool
 // clears any schedule override (manual or temp hold) AND clears geofence
 // Away. Mirrors the mobile app's "Resume Program" button.
 //
-// Empirically, writing just {"schedOverride":0, ...} is ignored by the
-// Skyport server. The override only clears when cspHome/hspHome are also
-// written in the same PUT (same pattern SetTemp uses). We use the current
-// scheduled setpoints as the targets so the thermostat lands on what the
-// schedule says it should be.
+// NOTE (verified 2026-08-31, ONETOUCH fw 4.0.17): an earlier comment here
+// claimed a bare {"schedOverride":0, ...} is ignored by the Skyport server and
+// only clears when cspHome/hspHome ride along. That is NOT true. Writing
+// {"schedOverride":0,"schedEnabled":true,"geofencingAway":false} with no
+// setpoints, while a temp hold was active at cspHome=25.3 (offset from the
+// scheduled 23.3), cleared the override and dropped cspActive back to 23.3.
+//
+// The earlier conclusion came from reading state ~5s after each write. The
+// Skyport API is eventually consistent and takes >5s to reflect a write, so
+// those reads were showing the PREVIOUS write's state. Poll until the value
+// is stable before concluding anything about a payload.
+//
+// cspHome/hspHome are still written here so the reported home setpoints match
+// the schedule after a resume. That is a deliberate convenience, not a
+// requirement for clearing the override.
 func buildResumePayload(cspSched, hspSched float32) string {
 	return fmt.Sprintf(
 		`{"cspHome":%g,"hspHome":%g,"schedOverride":0,"schedEnabled":true,"geofencingAway":false}`,
